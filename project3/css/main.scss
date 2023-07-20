@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+$primary: #e6ba38;
+$primary-dark: #0a515a;
+
+$family-sans-serif: 'Montserrat', sans-serif;
+
+@import "../node_modules/bulma/bulma.sass";
+
+body {
+
+  color: $grey-dark;
+
+  .title {
+    color: $grey-dark;
+  }
+
+  a.navbar-item:hover {
+    color: $primary;
+  }
+
+  .hero-landing{
+    background-image: url(../assets/Shape.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-landing img {
+    max-height: 100vh;
+  }
+
+  .social-icons-title{
+    gap:5px
+  }
+  
+  .is-fixed {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+  }
+
+  .social-icons-title a{
+    color: $white;
+    background-color: $grey-dark;
+    border-radius: 50%;
+    padding: 10px 15px;
+  }
+}
