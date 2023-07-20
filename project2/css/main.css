@@ -10286,5 +10286,9 @@ body .hero-landing {
   background: url("../assets/hero.webp") center;
   background-size: cover;
 }
+body .hero-explore {
+  background: url("../assets/vineyard.webp") center;
+  background-size: cover;
+}
 
 /*# sourceMappingURL=main.css.map */
