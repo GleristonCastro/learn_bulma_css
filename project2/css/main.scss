@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@200;400;500;600;700;800;900&family=Rubik&display=swap');
+
+$primary: #24BE8C;
+$primary-dark: #0a515a;
+
+$family-sans-serif: 'Rubik', sans-serif;
+$famuly-secondary: 'League Spartan', sans-serif;
+
+@import "../node_modules/bulma/bulma.sass";
