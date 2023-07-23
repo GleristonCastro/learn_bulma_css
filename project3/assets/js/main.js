@@ -349,3 +349,24 @@ const onChange = () => {
 }
 
 this.wallop.on('change', onChange);
+
+(function() {
+	const now = new Date();
+	const spanYear = document.getElementById('year');
+	spanYear.innerText = now.getFullYear();
+})();
+
+let prevScrollpos = window.scrollY;
+window.onscroll = function() {
+	const navMain = document.getElementById('navbarMain').className;
+	if (navMain != 'navbar-menu is-active') {
+		let currentScrollPos = window.scrollY;
+		if (prevScrollpos > currentScrollPos) {
+			document.getElementById("navbarnav").style.top = "0";
+		} else {
+			document.getElementById("navbarnav").style.top = "-76px";
+		}
+		prevScrollpos = currentScrollPos;
+
+	}
+}
