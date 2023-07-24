@@ -1840,7 +1840,7 @@ background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(205,205,205,1) 6%
   }
 }
 
-@media (max-width:1024px) {
+@media (max-width:1023px) {
 
   body {
     .fa-language {
@@ -2309,6 +2309,21 @@ background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(205,205,205,1) 6%
       }
     }
 
+    @media (max-width: 600px){
+      .accordion-tab {
+        background-color: $dt-secondary-white !important;
+        border-color: $dt-primary-dark !important;
+        color: $dt-primary-dark;
+        opacity: 0.5;
+      }
+      .accordion-tab.accordion-active, .accordion-tab:hover {
+        border-color: $dt-primary !important;
+        color: $dt-secondary-dark;
+        opacity: 1;
+        //transition: $transitionDefault;
+      }
+    }
+
     .accordion {
       @media (min-width: 600px) {}
 
@@ -2408,6 +2423,7 @@ background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(205,205,205,1) 6%
     h3,
     h3+a {
       background-color: $dt-default-dark-trasparence-portfolio;
+      color: $dt-primary-dark;
     }
 
     nav a {
@@ -2466,7 +2482,7 @@ background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(205,205,205,1) 6%
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   
   .dark {
     .fa-moon, .fa-sun {
