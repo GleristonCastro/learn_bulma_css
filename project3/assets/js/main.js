@@ -1,3 +1,26 @@
+const changeThemeBtn = document.querySelector('#change-theme');
+
+function toggleDarkMode() {
+  document.body.classList.toggle('dark');
+}
+
+(function() {
+	const darkMode = localStorage.getItem('dark');
+  if (darkMode) {
+    toggleDarkMode();
+  }
+})();
+
+changeThemeBtn.addEventListener('change', function () {
+  toggleDarkMode();
+
+  localStorage.removeItem('dark');
+
+  if (document.body.classList.contains('dark')) {
+    localStorage.setItem('dark', 1);
+  }
+});
+
 document.addEventListener('DOMContentLoaded', () => {
 	const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
 	$navbarBurgers.forEach(el => {
@@ -20,8 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
 			this.Nav = Array.from(this.el.querySelectorAll('nav a'));
 			this.totalSlides = this.Slides.length;
 			this.current = 0;
-			this.autoPlay = true; //true or false
-			this.timeTrans = 4000; //transition time in milliseconds
+			this.autoPlay = true;
+			this.timeTrans = 4000;
 			this.IndexElements = [];
 
 			for (let i = 0; i < this.totalSlides; i++) {
@@ -76,12 +99,12 @@ document.addEventListener('DOMContentLoaded', () => {
 	const slider = new SliderClip(document.querySelector('.slider'));
 }
 
-const labels = document.querySelectorAll(".accordion-item__label");
-const tabs = document.querySelectorAll(".accordion-tab");
+const labels = document.querySelectorAll('.accordion-item__label');
+const tabs = document.querySelectorAll('.accordion-tab');
 
 function toggleShow() {
 	const target = this;
-	const item = target.classList.contains("accordion-tab")
+	const item = target.classList.contains('accordion-tab')
 		? target
 		: target.parentElement;
 	const group = item.dataset.actabGroup;
@@ -90,9 +113,9 @@ function toggleShow() {
 	tabs.forEach(function (tab) {
 		if (tab.dataset.actabGroup === group) {
 			if (tab.dataset.actabId === id) {
-				tab.classList.add("accordion-active");
+				tab.classList.add('accordion-active');
 			} else {
-				tab.classList.remove("accordion-active");
+				tab.classList.remove('accordion-active');
 			}
 		}
 	});
@@ -102,20 +125,20 @@ function toggleShow() {
 
 		if (tabItem.dataset.actabGroup === group) {
 			if (tabItem.dataset.actabId === id) {
-				tabItem.classList.add("accordion-active");
+				tabItem.classList.add('accordion-active');
 			} else {
-				tabItem.classList.remove("accordion-active");
+				tabItem.classList.remove('accordion-active');
 			}
 		}
 	});
 }
 
 labels.forEach(function (label) {
-	label.addEventListener("click", toggleShow);
+	label.addEventListener('click', toggleShow);
 });
 
 tabs.forEach(function (tab) {
-	tab.addEventListener("click", toggleShow);
+	tab.addEventListener('click', toggleShow);
 });
 
 (function (global) {
@@ -362,9 +385,9 @@ window.onscroll = function() {
 	if (navMain != 'navbar-menu is-active') {
 		let currentScrollPos = window.scrollY;
 		if (prevScrollpos > currentScrollPos) {
-			document.getElementById("navbarnav").style.top = "0";
+			document.getElementById('navbarnav').style.top = '0';
 		} else {
-			document.getElementById("navbarnav").style.top = "-76px";
+			document.getElementById('navbarnav').style.top = '-76px';
 		}
 		prevScrollpos = currentScrollPos;
 
