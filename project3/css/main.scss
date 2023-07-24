@@ -687,6 +687,7 @@ body {
           cursor: pointer;
           transition: padding .2s ease;
           position: relative;
+          display: none;
 
           &:after {
             content: "";
@@ -760,39 +761,39 @@ body {
       }
     }
 
-    @media (min-width: 600px) {
+    
 
-      .accordion-tabs {
-        display: flex;
-        font-weight: bold;
-        gap: 20px;
+    .accordion-tabs {
+      display: flex;
+      font-weight: bold;
+      gap: 20px;
 
-        .accordion-tab {
-          padding: 1rem 2rem;
-          font: inherit;
-          flex: 1;
-          border: none;
-          border-bottom: 5px solid #f5f5f5;
-          cursor: pointer;
-          text-transform: uppercase;
-          background-color: $lt-primary-white;
-          transition: background .1s ease;
+      .accordion-tab {
+        padding: 1rem 2rem;
+        font: inherit;
+        flex: 1;
+        border: none;
+        border-bottom: 5px solid #f5f5f5;
+        cursor: pointer;
+        text-transform: uppercase;
+        background-color: $lt-primary-white;
+        transition: background .1s ease;
 
-          &:hover {
-            border-color: $lt-primary;
-          }
+        &:hover {
+          border-color: $lt-primary;
+        }
 
-          &:last-child {
-            border-right: 0;
-          }
+        &:last-child {
+          border-right: 0;
+        }
 
-          &.accordion-active {
-            background: $lt-primary-white;
-            border-bottom: 5px solid $lt-primary;
-          }
+        &.accordion-active {
+          background: $lt-primary-white;
+          border-bottom: 5px solid $lt-primary;
         }
       }
-
+      
+      
       .accordion-item {
         padding: 2.4rem;
         display: none;
@@ -832,6 +833,7 @@ body {
         margin-top: 2rem;
 
       }
+      
     }
 
 
@@ -2000,6 +2002,35 @@ background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(205,205,205,1) 6%
     .title-rotate {
       font-size: 2rem !important;
     }
+  }
+}
+
+@media (max-width: 600px){
+  .accordion {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .accordion-tabs {
+    transform: rotate(-90deg);
+    width: 15%;
+    display: inline-flex !important;
+    flex-direction: row-reverse;
+  }
+
+  .accordion-content {
+    width: 85%;
+    flex-direction: row-reverse;
+  }
+  .accordion-item__container {
+    margin-right: 0;
+  }
+  .direction-l .flag:before {
+    display: none !important;
+  }
+  .direction-r .flag:before {
+    display: none !important;
   }
 }
 
