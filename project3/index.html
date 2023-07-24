@@ -14,7 +14,7 @@
     <nav class="navbar has-text-weight-bold container has-background-white-ter" role="navigation"
       aria-label="main navigation">
       <div class="navbar-brand">
-        <a class="navbar-item is-size-4" href="#">
+        <a class="navbar-item is-size-4" href="/">
           profiloDev.
         </a>
 
@@ -51,25 +51,34 @@
             CONTACT
           </a>
         </div>
+        <ul class="navbar-item">
+          <li>
+              <input type="checkbox" name="change-theme" id="change-theme" />
+              <label for="change-theme">
+                <i class="fa-solid fa-sun"></i><label for="change-theme" id="light-dark-mode" class="label-change">THEME MODE</label>
+                <i class="fa-solid fa-moon"></i>
+              </label>
+          </li>
+        </ul>
 
         <div class="navbar-item has-dropdown is-hoverable">
           <a class="navbar-link">
-            <i class="fa-solid fa-gear"></i>
+            <i class="fa-solid fa-language"></i>
+            <span class="label-change-language">LANGUAGE</span>
           </a>
 
           <div class="navbar-dropdown">
             <a class="navbar-item">
-              <i class="fa-solid fa-moon"></i> Dark mode
-            </a>
-            <hr class="navbar-divider">
-            <a class="navbar-item">
-              English version
+              English
             </a>
             <a class="navbar-item">
-              Spanish version
+              Spanish
             </a>
             <a class="navbar-item">
-              French version
+              French
+            </a>
+            <a class="navbar-item">
+              Portuguese
             </a>
           </div>
         </div>
@@ -101,7 +110,7 @@
               I almost forgot to mention that I'm also a blogger sometimes.</p>
 
             <p class="buttons">
-              <button class="button is-primary has-text-weight-semibold">
+              <button class="button is-primary-dark has-text-weight-semibold">
                 <span class="icon">
                   <i class="fa-solid fa-file-arrow-down"></i>
                 </span>
@@ -223,10 +232,10 @@
           </section>
           <section class="accordion-content">
             <article class="accordion-item accordion-active" data-actab-group="0" data-actab-id="0">
-              <h4 class="accordion-item__label">Dedicated professional with a proven track record in team leadership,
-                problem-solving, and goal achievement. Strong communication and project management skills.</h4>
+              <h4 class="accordion-item__label">Experiences</h4>
               <div class="accordion-item__container">
-
+                <p>Dedicated professional with a proven track record in team leadership,
+                  problem-solving, and goal achievement. Strong communication and project management skills.</p>
                 <ul class="timeline">
                   <!-- Item 1 -->
                   <li>
@@ -292,11 +301,11 @@
               </div>
             </article>
             <article class="accordion-item" data-actab-group="0" data-actab-id="1">
-              <h4 class="accordion-item__label">Strong academic background with a focus on [area of study].
-                Interdisciplinary approach and developed analytical abilities. Committed to continuous learning and
-                personal growth.</h4>
+              <h4 class="accordion-item__label">Education</h4>
               <div class="accordion-item__container">
-
+                <p>Strong academic background with a focus on [area of study].
+                  Interdisciplinary approach and developed analytical abilities. Committed to continuous learning and
+                  personal growth.</p>
                 <ul class="timeline">
                   <li>
                     <div class="direction-r">
@@ -354,11 +363,11 @@
               </div>
             </article>
             <article class="accordion-item" data-actab-group="0" data-actab-id="2">
-              <h4 class="accordion-item__label">Constant pursuit of updating and acquiring new skills. Various courses
-                in [relevant areas], including [highlight specific courses]. Eager for knowledge and professional
-                development.</h4>
+              <h4 class="accordion-item__label">Courses</h4>
               <div class="accordion-item__container">
-
+                <p>Constant pursuit of updating and acquiring new skills. Various courses
+                  in [relevant areas], including [highlight specific courses]. Eager for knowledge and professional
+                  development.</p>
                 <ul class="timeline">
                   <!-- Item 1 -->
                   <li>
@@ -697,7 +706,7 @@
           <div class="contact-more-options my-5">
             <h4 class="has-text-weight-bold mb-3">Additional contact methods</h4>
             <ul>
-              <li><i class="fa-solid fa-envelope"></i> <a href="mailto:contactme@email.com" class="has-text-grey-dark has-text-weight-semibold">contactme@email.com</a></li>
+              <li><i class="fa-solid fa-envelope"></i> <a href="mailto:contactme@email.com" class="has-text-primary has-text-weight-semibold">contactme@email.com</a></li>
               <li><i class="fa-solid fa-phone has-text-weight-semibold"></i> +1 2254 2235</li>
             </ul>
           </div>
@@ -744,8 +753,8 @@
               <label class="form-label" for="message">Message</label>
               <textarea class="form-control" id="message" name="message" required></textarea>
             </div>
-            <div>
-              <button class="button is-primary has-text-weight-semibold" type="button">Submit</button>
+            <div class="buttons is-justify-content-center">
+              <button class="button is-primary-dark has-text-weight-semibold" type="button">Submit</button>
               <button class="button has-text-weight-semibold" type="reset">Clear</button>
             </div>
           </form>
