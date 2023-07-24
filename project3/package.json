@@ -1,7 +1,6 @@
 {
   "name": "project2",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,5 +10,9 @@
   "license": "ISC",
   "dependencies": {
     "bulma": "^0.9.4"
-  }
+  },
+  "devDependencies": {
+    "purify-css": "^1.2.5"
+  },
+  "description": ""
 }
