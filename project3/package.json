@@ -11,8 +11,5 @@
   "dependencies": {
     "bulma": "^0.9.4"
   },
-  "devDependencies": {
-    "purify-css": "^1.2.5"
-  },
   "description": ""
 }
